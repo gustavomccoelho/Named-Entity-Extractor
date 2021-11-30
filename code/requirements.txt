@@ -3,5 +3,9 @@ git+https://github.com/kmkurn/pytorch-crf.git@4cd79bc8af55fb0f34a2a39b2e38f0e71c
 seqeval==0.0.12
 jsonlines==1.2.0
 scikit-learn==0.21.2
-tika
-progress
+tika~=1.24
+progress~=1.5
+matplotlib~=3.3.4
+wordcloud~=1.8.1
+tqdm~=4.62.3
+numpy~=1.19.5

@@ -73,17 +73,20 @@ def load_and_cache_examples(
     return dataset, examples, features
 
 
-if __name__ == "__main__":
+def run_inference(args):
+    """Preprocesses an input JSON file to generate inference examples and
+    convert to BERT format according to the provided args (tokenizer,
+    tag_encoder/scheme, max sequence length, doc stride, etc)."""
 
     parser = ArgumentParser("NER inference CLI")
 
     # Model and hyperparameters
     parser.add_argument("--input_file",
-                        required=True,
+                        default=args["input_file"],
                         help="File to load examples for inference (JSON or "
                              "txt).")
     parser.add_argument("--output_file",
-                        default='-',
+                        default=args["output_file"],
                         help="File to save prediction results. Defaults to "
                              "stdout.")
     parser.add_argument("--output_format",
@@ -91,12 +94,10 @@ if __name__ == "__main__":
                         default="json",
                         help="Format to save the predictions (json or conll). "
                              "Defaults to json.")
-
-    parser.add_argument("--bert_model", default=None, type=str, required=True,
+    parser.add_argument("--bert_model", default=args["bert_model"], type=str,
                         help="Bert pre-trained model name or path to a "
                         "checkpoint directory.")
     parser.add_argument("--tokenizer_model", default=None, type=str,
-                        required=False,
                         help="Path to tokenizer files. If empty, defaults to "
                         "--bert_model.")
     parser.add_argument("--do_lower_case",
@@ -112,7 +113,7 @@ if __name__ == "__main__":
                         help="When splitting up a long document into chunks, "
                         "how much stride to take between chunks.")
     parser.add_argument('--labels_file',
-                        required=True,
+                        default=args["labels_file"],
                         help="File with all NER classes to be considered, one "
                         "per line.")
     parser.add_argument('--scheme',
@@ -208,7 +209,7 @@ if __name__ == "__main__":
     metrics = evaluate(
         args,
         model,
-        tqdm(dataloader, desc="Prediction"),
+        dataloader,
         output_composer=output_composer,
         sequence_metrics=SequenceMetrics([]),  # Empty metrics
         reset=True,
