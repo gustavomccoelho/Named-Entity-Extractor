@@ -48,13 +48,13 @@ from torch.utils.data import (DataLoader, Dataset, RandomSampler,
 from torch.utils.data.distributed import DistributedSampler
 from tqdm.autonotebook import tqdm, trange
 
-from dataset import get_bert_encoded_dataset
-from eval_tools import SequenceMetrics, write_conll_prediction_file
-from postprocessing import OutputComposer
-from preprocessing import Example, InputSpan
-from results_writer import compile_results, write_jsonl_results
-from tag_encoder import NERTagsEncoder
-from utils import RunningAccumulator, load_model, save_model
+from utils.dataset import get_bert_encoded_dataset
+from utils.eval_tools import SequenceMetrics, write_conll_prediction_file
+from utils.postprocessing import OutputComposer
+from utils.preprocessing import Example, InputSpan
+from utils.results_writer import compile_results, write_jsonl_results
+from utils.tag_encoder import NERTagsEncoder
+from utils.util import RunningAccumulator, load_model, save_model
 
 logger = logging.getLogger(__name__)
 

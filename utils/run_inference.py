@@ -15,15 +15,15 @@ from pytorch_transformers.tokenization_bert import BertTokenizer
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 
-from dataset import get_dataset
-from eval_tools import (SequenceMetrics, write_conll_prediction_file,
+from utils.dataset import get_dataset
+from utils.eval_tools import (SequenceMetrics, write_conll_prediction_file,
                         write_outputs_to_json)
-from postprocessing import OutputComposer
-from preprocessing import (Example, InputSpan, get_features_from_examples,
+from utils.postprocessing import OutputComposer
+from utils.preprocessing import (Example, InputSpan, get_features_from_examples,
                            read_examples)
-from tag_encoder import NERTagsEncoder
-from trainer import evaluate
-from utils import load_model
+from utils.tag_encoder import NERTagsEncoder
+from utils.trainer import evaluate
+from utils.util import load_model
 
 logger = logging.getLogger(__name__)
 

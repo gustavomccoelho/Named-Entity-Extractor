@@ -6,7 +6,7 @@ from typing import Type, Union
 import torch
 from pytorch_transformers.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 
-from model import get_model_and_kwargs_for_args
+from utils.model import get_model_and_kwargs_for_args
 
 
 logger = logging.getLogger(__name__)

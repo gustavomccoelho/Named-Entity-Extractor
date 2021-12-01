@@ -6,7 +6,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 import numpy as np
 from seqeval.metrics.sequence_labeling import get_entities
 
-from preprocessing import Example, InputSpan
+from utils.preprocessing import Example, InputSpan
 
 
 TAG_SEQUENCE = Union[List[int], List[str]]

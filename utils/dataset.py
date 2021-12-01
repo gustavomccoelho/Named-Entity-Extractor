@@ -11,8 +11,8 @@ from torch.utils.data import (
 )
 from tqdm import tqdm
 
-from model import BertForNERClassification
-from preprocessing import InputSpan
+from utils.model import BertForNERClassification
+from utils.preprocessing import InputSpan
 
 
 logger = logging.getLogger(__name__)

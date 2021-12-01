@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 from argparse import ArgumentParser
 from progress.bar import Bar
-from run_inference import run_inference
+from utils.run_inference import run_inference
 import json
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -61,29 +61,29 @@ if __name__ == "__main__":
                            help="Level of verbose (0 for silent, 1 for full verbose)"
                                 "Default is 1")
     argParser.add_argument("--input_path",
-                           default="../data/input/raw/",
+                           default="data/input/raw/",
                            help="Path for pdf input files."
-                                "Default is ../data/input/raw/")
+                                "Default is data/input/raw/")
     argParser.add_argument("--predictions_file",
-                           default="../data/input/temp/predictions.txt",
+                           default="data/input/temp/predictions.txt",
                            help="Predictions file."
-                                "Default is ../data/input/temp/predictions.txt")
+                                "Default is data/input/temp/predictions.txt")
     argParser.add_argument("--entities_path",
-                           default="../data/output/entities/",
+                           default="data/output/entities/",
                            help="Path for entities frequencies output."
-                                "Default is ../data/output/entities/")
+                                "Default is data/output/entities/")
     argParser.add_argument("--wordcloud_path",
-                           default="../data/output/wordcloud/",
+                           default="data/output/wordcloud/",
                            help="Path for txt files."
-                                "Default is ../data/output/wordcloud/")
+                                "Default is data/output/wordcloud/")
     argParser.add_argument('--labels_file',
-                           default="../data/input/labels/classes.txt",
+                           default="data/input/labels/classes.txt",
                            help="File with all NER classes to be considered, one "
                                 "per line.")
     argParser.add_argument('--bert_model',
-                           default="../data/input/model_checkpoint/",
+                           default="data/input/model_checkpoint/",
                            help="Path to the BERT model"
-                                "Default is ../data/input/model_checkpoint/")
+                                "Default is data/input/model_checkpoint/")
 
 
     args = argParser.parse_args()
@@ -120,7 +120,7 @@ if __name__ == "__main__":
         "labels_file": args.labels_file,
         "tokenizer_model": args.bert_model,
         "bert_model": args.bert_model,
-        "input_file": "../data/input/temp/pre_processed.txt",
+        "input_file": "data/input/temp/pre_processed.txt",
         "output_file": args.predictions_file,
     }
 
