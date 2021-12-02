@@ -17,14 +17,21 @@ The final output is composed of:
 <img src="https://github.com/gustavomccoelho/Named-Entity-Extractor/blob/main/data/output/wordcloud/wordcloud_tempo.jpg" width="500">
 
 # Requirements
+The list of the required python packages is found on utils/requirements.txt. For quick instalation under the selected environment, simply run:
 
+```
+pip install -r requirements.txt
+```
 
-# Environment
+The pre-trained models can be downloaded from [this link](https://neuralmind-ai.s3.us-east-2.amazonaws.com/nlp/bert-large-portuguese-cased/bert-large-portuguese-cased_tensorflow_checkpoint.zip) and should be placed under data/input/model_checkpoint/.
+
 The test environment was configured as following:
 
 - Operational System: Ubuntu 18.04
 - Python version: 3.6
 - Java version: 8
+
+Note: Java is required for handling PDF files by the tika package.
 
 # Implementation
 To implement the program, simply place the PDF document(s) into the folder data/input/raw/ and run: 
