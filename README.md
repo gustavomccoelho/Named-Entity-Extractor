@@ -53,7 +53,7 @@ The default output folders are set as below:
 ```
 python main.py
     --verbose 1 {0 for silent run}
-    --input_path data/input/raw/ {}
+    --input_path data/input/raw/ 
     --predictions_file data/input/temp/predictions.txt
     --entities_path data/output/entities/
     --wordcloud_path data/output/wordcloud/
