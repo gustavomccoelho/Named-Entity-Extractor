@@ -23,7 +23,7 @@ The list of the required python packages is found on utils/requirements.txt. For
 pip install -r requirements.txt
 ```
 
-The pre-trained models can be downloaded from [this link](https://neuralmind-ai.s3.us-east-2.amazonaws.com/nlp/bert-large-portuguese-cased/bert-large-portuguese-cased_tensorflow_checkpoint.zip). The default location is: data/input/model_checkpoint/.
+The pre-trained models can be downloaded from [this link](https://neuralmind-ai.s3.us-east-2.amazonaws.com/nlp/bert-large-portuguese-cased/bert-large-portuguese-cased_tensorflow_checkpoint.zip). The default path for storing the models is: data/input/model_checkpoint/.
 
 The test environment was configured as following:
 
@@ -31,7 +31,10 @@ The test environment was configured as following:
 - Python version: 3.6
 - Java version: 8
 
-Note: Java is required for handling PDF files by the tika package.
+GPU is desirable for faster implementation.
+
+Notes:  Java is required for handling PDF files by the tika package.
+        
 
 # Implementation
 To implement the program at the default arguments, simply place the PDF document(s) into the input folder (default is data/input/raw/) and run: 
@@ -50,7 +53,7 @@ The default output folders are set as below:
 ```
 python main.py
     --verbose 1 {0 for silent run}
-    --input_path data/input/raw/
+    --input_path data/input/raw/ {}
     --predictions_file data/input/temp/predictions.txt
     --entities_path data/output/entities/
     --wordcloud_path data/output/wordcloud/
