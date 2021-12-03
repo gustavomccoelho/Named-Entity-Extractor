@@ -11,7 +11,7 @@ The entities classes are set as below:
 
 The final output is composed of:
 
-- A list of all named entities extracted and its frequencies for each class
+- A list of all named entities extracted and its count for each class
 - A corresponding wordcloud for each named entity class, as below (for class Time)
 
 <img src="https://github.com/gustavomccoelho/Named-Entity-Extractor/blob/main/data/output/wordcloud/wordcloud_tempo.jpg" width="500">
