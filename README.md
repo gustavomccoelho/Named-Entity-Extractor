@@ -1,5 +1,5 @@
 # Portuguese Named Entity Extractor
-This repository describes a Named Entity Extractor, a proposed implementation of the Named Entity Recognition (NER) task for a given portuguese written file (or a set of files) in PDF format. The model used for this task is based on the **BERTimbau project** [[1]](#1), where the word embeddings ([BERT](https://github.com/google-research/bert)) are combined with a CRF layer and trained on a portuguese corpus. The base code is taken from the [original project](https://github.com/neuralmind-ai/portuguese-bert).  
+This repository describes a Named Entity Extractor, a proposed implementation of the Named Entity Recognition (NER) task for a given Portuguese written file (or a set of files) in PDF format. The model used for this task is based on the **BERTimbau project** [[1]](#1), where the word embeddings ([BERT](https://github.com/google-research/bert)) are combined with a CRF layer and trained on a Portuguese corpus. The base code is taken from the [original project](https://github.com/neuralmind-ai/portuguese-bert).  
 
 The entities classes are set as below:
 
@@ -17,7 +17,7 @@ The final output is composed of:
 <img src="https://github.com/gustavomccoelho/Named-Entity-Extractor/blob/main/data/output/wordcloud/wordcloud_tempo.jpg" width="500">
 
 # Requirements
-The list of the required python packages is found on utils/requirements.txt. For quick instalation under the selected environment, simply run:
+The list of the required python packages is found on utils/requirements.txt. For quick installation under the selected environment, simply run:
 
 ```
 pip install -r requirements.txt
