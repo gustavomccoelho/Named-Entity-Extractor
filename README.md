@@ -23,7 +23,7 @@ The list of the required python packages is found on utils/requirements.txt. For
 pip install -r requirements.txt
 ```
 
-The pre-trained models can be downloaded from [this link](https://neuralmind-ai.s3.us-east-2.amazonaws.com/nlp/bert-large-portuguese-cased/bert-large-portuguese-cased_tensorflow_checkpoint.zip). The default path for storing the models is: data/input/model_checkpoint/.
+The pre-trained models can be downloaded from [this link](https://drive.google.com/file/d/12PE1ypJ949rpatseSV37NXnHwB2Y8jZ5/view?usp=sharing). The default path for storing the models is: data/input/model_checkpoint/.
 
 The test environment was configured as following:
 
